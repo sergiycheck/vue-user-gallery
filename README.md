@@ -13,6 +13,8 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
+
+`lite-server --baseDir="dist"`
 ```
 
 ### Run your unit tests
