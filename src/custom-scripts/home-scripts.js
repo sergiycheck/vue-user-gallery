@@ -5,15 +5,12 @@ export default function activateHomeHandlers(){
 	commentReadMoreWithClassName();
 	showBigPostWithClassName();
 
-
 }
 
 
+export function skipVideoOnEnd(){
 
-function skipVideoOnEnd(){
-  // console.log('user-script skipVideoOnEnd');
 
-  //setTimeout(()=>{
 
     const carouselInner = document.querySelector(".carousel-inner");
     if(carouselInner){
@@ -44,11 +41,8 @@ function skipVideoOnEnd(){
     },100);//animation time?
 
 
-  //},10);
-
-
-
 }
+
 
 function videoEndedHandler(vid){
 	if(vid){
@@ -58,7 +52,6 @@ function videoEndedHandler(vid){
 	}
 
 }
-
 
 
 function AddClickListenerForCarouselNextBtn(){
@@ -109,22 +102,28 @@ function playNextVideo(vid){
 	}
 }
 
+export class BigPostManager{
+  constructor(allowToSetShowBigPostView){
+    this.allowToSetShowBigPostView = allowToSetShowBigPostView;
+  }
+  get allowToSetShowBigPostView(){
+    return this.allowToSetShowBigPostView;
+  }
+  set allowToSetShowBigPostView(value){
+    this.allowToSetShowBigPostView = value;
+  }
+}
 
+export function showBigPostWithClassName(){
 
-function showBigPostWithClassName(){
-  // console.log('user-script showBigPostWithClassName');
-
-  //setTimeout(()=>{
-
+  
     let posts = document.querySelectorAll(".click-big-post");
     posts.forEach(p=>{
       p.addEventListener('click',(event)=>{
         showBigPostViewFromClass(event.target);
       })
     });
-
-  //},10);
-
+  
 
 }
 
@@ -166,31 +165,36 @@ function setPostSource(sourceName){
 	document.getElementById("overlay-post-view").setAttribute("src",sourceName);
 }
 
+
 export function commentReadMoreWithClassName(){
-  // console.log('user-script commentReadMoreWithClassName');
-  //todo: uncomment
-  //setTimeout(()=>{
-
-    let posts = document.querySelectorAll(".readmore");
-    posts.forEach(p=>{
-      p.addEventListener('click',(event)=>{
-        commentReadMoreWithClass(event.target.parentElement);
-      })
-    });
-
-  //},10)
-
-
+  
+  let posts = document.querySelectorAll(".readmore");
+  posts.forEach(p=>{
+    p.addEventListener('click',(event)=>{
+      commentReadMoreWithClass(event.target.parentElement);
+    })
+  });
+    
 }
 
 //todo: add animation to comment read more
 function commentReadMoreWithClass(commentContent){
-	const readMoreSpanPromise =  new Promise((resolve)=>{
-		resolve(commentContent.querySelector(".readmore"));
+
+	const readMoreSpanPromise =  new Promise((resolve,reject)=>{
+    const readMoreComponent = commentContent.querySelector(".readmore");
+    if(readMoreComponent){
+      console.log(readMoreComponent);
+      resolve(readMoreComponent);
+    }else{
+      reject(()=>console.log('cannot find el with class readmore'))
+    }
 	});
 	readMoreSpanPromise.then((readMoreSpan)=>{
 		let dots = commentContent.querySelector(".dots");
 		let moreText = commentContent.querySelector(".more");
+    //console.log(dots);
+    //console.log(moreText);
+
 		if(dots.style.display==="none"){
 			dots.style.display = "inline";
 			moreText.style.display = "none";
@@ -201,5 +205,6 @@ function commentReadMoreWithClass(commentContent){
 			readMoreSpan.innerText = " read less"
 		}
 	});
+
 }
 

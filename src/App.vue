@@ -1,67 +1,95 @@
 <template>
-  <div id="app" class="wrapper">
+  <div class="wrapper">
 
     <div id="nav">
 
-      <div>
-        <b-navbar toggleable="lg" type="light" variant="light">
+    <nav class="navbar navbar-expand-md fixed-top navbar-light shadow p-0 bg-light" role="navigation"> 
 
-          <b-navbar-brand href="#">
-            <router-link to="/">Home</router-link>
-          </b-navbar-brand>
+			<div class="container text-dark">
 
-          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        <router-link class="navbar-brand"  to="/">Home</router-link>
 
-          <b-collapse id="nav-collapse" is-nav>
+				<button class="navbar-toggler" type="button" 
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+					aria-controls="navbarSupportedContent" aria-expanded="false" 
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+		
+				<div class="collapse navbar-collapse row" id="navbarSupportedContent">
 
-            <b-navbar-nav>
+					<div class="col">
+						<ul class="nav navbar-nav">
+							<li class="p-2">
+                <router-link class="nav-link" to="/explore">Explore</router-link>
+							</li>
+						</ul>
+					</div>
 
-              <b-nav-item href="#">
-                <router-link to="/explore">Explore</router-link>
-              </b-nav-item>
+					<div class="seach-col col-md-auto">
+						<div class="mt-2">
+							<form class="">
+								<input id="search" class="form-control" 
+									type="search" placeholder="" 
+									aria-label="Search">
+							</form>
+						</div>
+						
+					</div>
 
-              <b-nav-item href="#">
-                <router-link to="/messages">Messages</router-link>
-              </b-nav-item>
+					<div class="col col-md-auto">
+						<div class="nav navbar-nav d-flex justify-content-end">
 
-            </b-navbar-nav>
+              <router-link  class="nav-link" to="/messages">Messages</router-link>
 
-            <!-- Right aligned nav items -->
-            <b-navbar-nav class="ml-auto">
+              <div class="dropdown">
+								<a class="nav-link dropdown-toggle" href="#" 
+									role="button" id="dropdownMenuLink" 
+									data-bs-toggle="dropdown" aria-expanded="false">
+									User
+								</a>
 
-              <b-nav-form class="d-flex align-center">
-                <b-form-input size="sm" class="mr-sm-2 search" placeholder="Search"></b-form-input>
-                <b-button size="sm" class="my-2 my-sm-0 rounded bg-dark" type="submit">Search</b-button>
-              </b-nav-form>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
-              <b-nav-item-dropdown text="Lang" right>
-                <b-dropdown-item href="#">EN</b-dropdown-item>
-                <b-dropdown-item href="#">ES</b-dropdown-item>
-                <b-dropdown-item href="#">RU</b-dropdown-item>
-                <b-dropdown-item href="#">FA</b-dropdown-item>
-              </b-nav-item-dropdown>
+									<li>
+                    <router-link class="dropdown-item" to="/profile">Profile</router-link>
+                  </li>
 
-              <b-nav-item-dropdown right>
-                <!-- Using 'button-content' slot -->
-                <template #button-content>
-                  <em>User</em>
-                </template>
-                <b-dropdown-item href="#">
-                  <router-link to="/profile">Profile</router-link>
-                </b-dropdown-item>
+									<li><a class="dropdown-item" href="#">Sign out</a></li>
 
-                <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-              </b-nav-item-dropdown>
-            </b-navbar-nav>
+								</ul>
 
-          </b-collapse>
-        </b-navbar>
-      </div>
-            
+							</div>
+
+              
+
+							<div class="dropdown">
+								<a class="nav-link dropdown-toggle" href="#" 
+									role="button" id="dropdownMenuLink" 
+									data-bs-toggle="dropdown" aria-expanded="false">
+									Lang
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<li><a class="dropdown-item" href="#">EN</a></li>
+									<li><a class="dropdown-item" href="#">ES</a></li>
+									<li><a class="dropdown-item" href="#">RU</a></li>
+									<li><a class="dropdown-item" href="#">FA</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+					
+				</div>
+
+			</div>
+		</nav>
+
     </div>
 
 
-  <div className="mainContent">
+  <div class="mainContent">
     <router-view/>
   </div>
 
@@ -70,9 +98,14 @@
 </template>
 
 <script>
+
+import {addListenerForSearchInput} from './app.scripts.js';
+addListenerForSearchInput();
+
 export default {
   
 }
+
 </script>
 
 <style lang="scss">
@@ -120,7 +153,7 @@ $grid-breakpoints: (
 }
 
 $svg-search-icon:url('./assets/img/search.svg');
-.search{
+#search{
 	background:$svg-search-icon scroll 85% 50%;
 	padding-left: 10%;
 	background-repeat: no-repeat;

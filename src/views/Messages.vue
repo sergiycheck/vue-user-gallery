@@ -1,15 +1,507 @@
 <template>
-  <div class="">
-    <h1>Messages works!</h1>
-  </div>
+
+<div class="user-wrapper d-flex align-items-stretch mt-5">
+
+	<nav class="sidebar ">
+
+		<div class="custom-menu">
+			<button type="button" id="sidebarCollapse" class="btn btn-primary">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+				</svg>
+			</button>
+		</div>
+
+		<div class="p-4 pt-5">
+
+			<div class="mb-5">
+				<h3 class="h6">Search user names</h3>
+				<form action="#" class="colorlib-subscribe-form">
+					<div class="form-group d-flex">
+						<div class="icon"><span class="icon-paper-plane"></span></div>
+						<input type="text" class="form-control" placeholder="search user name"/>
+					</div>
+				</form>
+			</div>
+
+			<ul class="list-unstyled components mb-5">
+
+				<li class="active">
+					<a href="#"
+						data-bs-target="#homeSubmenu" aria-controls="homeSubmenu"
+						data-bs-toggle="collapse" aria-expanded="true"
+						class="dropdown-toggle">Group 1</a>
+					<ul class="collapse list-unstyled list-group" id="homeSubmenu">
+
+						<a class="list-group-item list-group-item-action rounded-0">
+							<div class="d-flex flex-row">
+								<img class=" rounded-circle me-1"
+								src="https://cdn.iconscout.com/icon/free/png-256/avatar-human-man-profile-auto-user-30483.png"
+								alt="user" width="50" height="65" />
+
+								<div class="ml-4">
+									<div class="d-flex align-items-center justify-content-between mb-1">
+										<h6 class="mb-0">First1 Last1</h6><small class="small font-weight-bold">25 Feb</small>
+									</div>
+									<p class="font-italic mb-0 text-small">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+										eiusmod tempor incididunt ut labore.
+									</p>
+								</div>
+							</div>
+						</a>
+
+						<a class="list-group-item list-group-item-action rounded-0">
+							<div class="d-flex flex-row">
+								<img class="rounded-circle me-1"
+								src="https://cdn.iconscout.com/icon/free/png-256/avatar-human-man-profile-auto-user-30483.png"
+								alt="user" width="50" height="65" />
+
+								<div class="ml-4">
+									<div class="d-flex align-items-center justify-content-between mb-1">
+										<h6 class="mb-0">First1 Last1</h6><small class="small font-weight-bold">25 Feb</small>
+									</div>
+									<p class="font-italic mb-0 text-small">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+										eiusmod tempor incididunt ut labore.
+									</p>
+								</div>
+							</div>
+						</a>
+
+						<a class="list-group-item list-group-item-action rounded-0">
+							<div class="d-flex flex-row">
+								<img class="rounded-circle me-1"
+								src="https://cdn.iconscout.com/icon/free/png-256/avatar-human-man-profile-auto-user-30483.png"
+								alt="user" width="50" height="65" />
+
+								<div class="ml-4">
+									<div class="d-flex align-items-center justify-content-between mb-1">
+										<h6 class="mb-0">First1 Last1</h6><small class="small font-weight-bold">25 Feb</small>
+									</div>
+									<p class="font-italic mb-0 text-small">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+										eiusmod tempor incididunt ut labore.
+									</p>
+								</div>
+							</div>
+						</a>
+
+					</ul>
+				</li>
+
+				<li>
+					<a class="list-group-item list-group-item-action rounded-0  ">
+						<div class="d-flex flex-row">
+							<img class="rounded-circle me-1"
+							src="https://cdn.iconscout.com/icon/free/png-256/avatar-human-man-profile-auto-user-30483.png"
+							alt="user" width="50" height="65" />
+
+							<div class="ml-4">
+								<div class="d-flex align-items-center justify-content-between mb-1">
+									<h6 class="mb-0">First1 Last1</h6><small class="small font-weight-bold">25 Feb</small>
+								</div>
+								<p class="font-italic mb-0 text-small">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+									eiusmod tempor incididunt ut labore.
+								</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+
+				<li>
+					<a href="#"
+					data-bs-target="#pageSubmenu" aria-controls="pageSubmenu"
+					data-bs-toggle="collapse" aria-expanded="true"
+					class="dropdown-toggle">Group 2</a>
+					<ul class="collapse list-unstyled list-group" id="pageSubmenu">
+						<li>
+							<a class="list-group-item list-group-item-action rounded-0  ">
+								<div class="d-flex flex-row">
+									<img class="rounded-circle me-1"
+									src="https://cdn.iconscout.com/icon/free/png-256/avatar-human-man-profile-auto-user-30483.png"
+									alt="user" width="50" height="65" />
+
+									<div class="ml-4">
+										<div class="d-flex align-items-center justify-content-between mb-1">
+											<h6 class="mb-0">First1 Last1</h6><small class="small font-weight-bold">25 Feb</small>
+										</div>
+										<p class="font-italic mb-0 text-small">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+											eiusmod tempor incididunt ut labore.
+										</p>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="list-group-item list-group-item-action rounded-0  ">
+								<div class="d-flex flex-row">
+									<img class="rounded-circle me-1"
+									src="https://cdn.iconscout.com/icon/free/png-256/avatar-human-man-profile-auto-user-30483.png"
+									alt="user" width="50" height="65" />
+
+									<div class="ml-4">
+										<div class="d-flex align-items-center justify-content-between mb-1">
+											<h6 class="mb-0">First1 Last1</h6><small class="small font-weight-bold">25 Feb</small>
+										</div>
+										<p class="font-italic mb-0 text-small">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+											eiusmod tempor incididunt ut labore.
+										</p>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="list-group-item list-group-item-action rounded-0  ">
+								<div class="d-flex flex-row">
+									<img class="rounded-circle me-1"
+									src="https://cdn.iconscout.com/icon/free/png-256/avatar-human-man-profile-auto-user-30483.png"
+									alt="user" width="50" height="65"/>
+
+									<div class="ml-4">
+										<div class="d-flex align-items-center justify-content-between mb-1">
+											<h6 class="mb-0">First1 Last1</h6><small class="small font-weight-bold">25 Feb</small>
+										</div>
+										<p class="font-italic mb-0 text-small">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+											eiusmod tempor incididunt ut labore.
+										</p>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<a class="list-group-item list-group-item-action rounded-0  ">
+						<div class="d-flex flex-row">
+							<img class="rounded-circle me-1"
+							src="https://cdn.iconscout.com/icon/free/png-256/avatar-human-man-profile-auto-user-30483.png"
+							alt="user" width="50" height="65" />
+
+							<div class="ml-4">
+								<div class="d-flex align-items-center justify-content-between mb-1">
+									<h6 class="mb-0">First1 Last1</h6><small class="small font-weight-bold">25 Feb</small>
+								</div>
+								<p class="font-italic mb-0 text-small">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+									eiusmod tempor incididunt ut labore.
+								</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a class="list-group-item list-group-item-action rounded-0  ">
+						<div class="d-flex flex-row">
+							<img class="rounded-circle me-1"
+							src="https://cdn.iconscout.com/icon/free/png-256/avatar-human-man-profile-auto-user-30483.png"
+							alt="user" width="50" height="65"/>
+
+							<div class="ml-4">
+								<div class="d-flex align-items-center justify-content-between mb-1">
+									<h6 class="mb-0">First1 Last1</h6><small class="small font-weight-bold">25 Feb</small>
+								</div>
+								<p class="font-italic mb-0 text-small">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+									eiusmod tempor incididunt ut labore.
+								</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+
+		</div>
+
+	</nav>
+
+	<div class="container">
+
+		<div class="row align-items-end chat-content justify-content-start">
+			<div class="col-sm-7">
+
+				<div class="chat-message-container d-flex flex-column overflow-auto">
+
+					<div class="my-2 align-self-start">
+						<div class="rounded d-flex mb-1">
+
+							<div class="me-2">
+								<img src="https://img.icons8.com/pastel-glyph/2x/person-male--v2.png"
+								width="50" height="50" class="rounded me-2" alt="user picture">
+							</div>
+
+							<div class="bg-light">
+								<div class="d-flex justify-content-end">
+									<small class="text-muted me-2 edit-msg">Edit</small>
+									<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+								</div>
+
+								<div class="p-2">
+									<p class="text-small mb-0 text-muted">
+										Message one Lorem, ipsum dolor sit amet
+									</p>
+								</div>
+							</div>
+
+						</div>
+						<p class="small text-muted">12:00 PM | Apr. 13</p>
+					</div>
+
+					<div class="my-2 align-self-start">
+						<div class="rounded d-flex mb-1">
+
+							<div class="me-2">
+								<img src="https://img.icons8.com/pastel-glyph/2x/person-male--v2.png"
+								width="50" height="50" class="rounded me-2" alt="user picture">
+							</div>
+
+							<div class="bg-light">
+								<div class="d-flex justify-content-end">
+									<small class="text-muted me-2 edit-msg">Edit</small>
+									<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+								</div>
+
+								<div class="p-2">
+									<p class="text-small mb-0 text-muted">
+										Message one Lorem, ipsum dolor sit amet
+									</p>
+								</div>
+							</div>
+
+						</div>
+						<p class="small text-muted">12:00 PM | Apr. 13</p>
+					</div>
+
+					<div class="my-2 align-self-end">
+						<div class="rounded d-flex mb-1">
+							<div class="bg-light">
+								<div class="d-flex justify-content-end">
+									<small class="text-muted me-2 edit-msg">Edit</small>
+									<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+								</div>
+
+								<div class="p-2">
+									<p class="text-small mb-0 text-white bg-primary p-2 rounded">
+										Message one Lorem, ipsum dolor sit amet
+									</p>
+								</div>
+							</div>
+
+						</div>
+						<p class="small text-muted">5:00 PM | Apr. 23</p>
+					</div>
+				</div>
+
+				<div class="p-1 m-2">
+					<div class="row justify-content-start">
+						<div class="col-md-9 col-sm-12">
+							<!-- <input id="message-data"
+								type="text"
+								class="form-control border-2 pl-2"
+								placeholder="Write your message..."> -->
+								<span
+									id="message-data"
+									class="input-span form-control border-2 pl-2"
+									role="textbox"
+									contenteditable>
+								</span>
+
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button id="send-message-btn" type="submit" class="btn btn-primary">
+								<span class="material-icons">send</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+</div>
+
+
 </template>
 
 <script>
+import {clickSideBarToggler} from '../custom-scripts/message-scripts.js';
+import {addMessage} from '../custom-scripts/message-scripts.js';
+
 export default {
-  
+  name:'Messages',
+  mounted(){
+    clickSideBarToggler();
+    addMessage();
+  }
 }
 </script>
 
-<style>
+<style lang="scss">
+
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+
+@mixin media-breakpoint-down($var){
+  @media (max-width:$var){
+    @content
+  }
+}
+
+@mixin transition($var){
+  transition: $var all ease;
+}
+
+// $primary: #654da7;
+// $white: #ffff;
+$sidebarWidth:450px;
+$sideBarAHover:rgba(28, 140, 252, 0.79);
+$white:#fff;
+$black:#000;
+$primary:#0d6efd;
+
+.sidebar {
+  min-width: $sidebarWidth;
+  max-width: $sidebarWidth;
+  // background: rgb(133, 196, 206);
+  color:$white;
+  transition: all 0.1s;
+  position: relative;
+  .h6{color: $black;
+  }
+  &.active{margin-left: -$sidebarWidth;
+    .custom-menu{margin-right: -50px;
+	}}
+  h1{margin-bottom: 20px;
+    font-weight: 700;
+    .logo{color: $black;
+  }}
+  ul.components{padding: 0;
+  }
+  ul{
+    li{font-size: 16px;
+      >ul{margin-left: 10px;
+    	  li{font-size: 14px;
+    		}}
+    	a{
+    		padding: 10px 5px;
+		    display: block;
+		    color: rgba(27, 22, 22, 0.8);
+		    border-bottom: 1px solid rgba(255,255,255,.1);
+		    &:hover{
+		    	color: $white;
+					background: $sideBarAHover;
+					cursor: pointer;
+		    }
+    	}
+    	&.active{
+    		> a{
+    			background: transparent;
+    			color: $black;
+    		}
+    	}
+    }
+  }
+
+  @include media-breakpoint-down(
+    map-get($map: $grid-breakpoints, $key: lg )){
+    margin-left: -$sidebarWidth;
+    &.active {
+      margin-left: 0;
+    }
+    .custom-menu{
+    	margin-right: -50px !important;
+    	top: 10px !important;
+    }
+  }
+
+	a {
+		transition: .1s all ease;
+		// color: $primary;
+		text-decoration: none !important;
+		&:hover, &:focus {
+			text-decoration: none !important;
+			outline: none !important;
+			box-shadow: none;
+		}
+	}
+	button {
+		transition: .1s all ease;
+		&:hover, &:focus {
+			text-decoration: none !important;
+			outline: none !important;
+			box-shadow: none !important;
+		}
+	}
+
+  .custom-menu{
+		display: inline-block;
+		position: absolute;
+		top: 50px;
+		right: 0;
+		margin-right: -20px;
+		@include transition(.2s);
+		.btn{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			&.btn-primary{
+				background: darken($primary,10%);
+				border-color: darken($primary,10%);
+				&:hover, &:focus{
+					background: darken($primary,10%) !important;
+					border-color: darken($primary,10%) !important;
+				}
+			}
+		}
+  }
+}
+
+
+.chat-content{
+	min-height: 85%;
+	width: auto;
+}
+.chat-message-container{
+	max-height: 80vh;
+	.edit-msg:hover{
+		cursor: pointer;
+		color: rgb(0, 0, 0);
+	}
+}
+
+//.textarea,
+.input-span{
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1px 6px;
+}
+
+
+
+
+
+
 
 </style>
